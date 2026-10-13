@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="21일 웻&드라이 혼합숙성, 다 구워드리는 고깃집 육일관 가맹점 모집. 가맹비 1,000만 원, 보증금 0원. 창업 문의 1661-2337">
+<meta property="og:title" content="육일관 가맹 안내">
+<meta property="og:description" content="월 매출 1억 8천, 21일 혼합숙성 고깃집 육일관 가맹 상담">
+<meta property="og:image" content="img/table.jpg">
+<title>육일관 가맹 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: 사진 중심 원페이지(뼈탄집 구성). 숯불 매장처럼 어두운 바탕에 고정 한 가지 톤, 간판 라이트박스의 따뜻한 금색 + 로고 낙관의 빨강 */
+:root{
+  --bg:#141110; --bg-2:#1D1917; --bg-3:#262019; --fg:#F3EDE5; --muted:#ADA397; --line:#3A322B;
+  --seal:#C8202F; --seal-ink:#FFFFFF; --lamp:#E2BD72; --lamp-ink:#1A140C;
+  --f-display:"Black Han Sans","Noto Sans KR",system-ui,sans-serif;
+  --f-serif:"Gowun Batang","Noto Serif KR",serif;
+  --f-body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.num{font-variant-numeric:tabular-nums}
+
+/* nav: 로고 가운데, 좌우 메뉴 */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(20,17,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-block:14px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:500}
+.nav ul.r{justify-content:flex-end}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--fg)}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo .han{font-family:var(--f-serif);font-size:12px;line-height:1.1;writing-mode:vertical-rl;color:var(--muted)}
+.logo b{font-family:var(--f-display);font-weight:400;font-size:28px;letter-spacing:.04em}
+.logo i{width:9px;height:9px;background:var(--seal);display:inline-block;align-self:flex-end;margin-bottom:8px}
+.nav .m-cta{display:none}
+@media (max-width:900px){
+  .nav .wrap{grid-template-columns:auto 1fr}
+  .nav ul{display:none}
+  .nav .m-cta{display:inline-flex;justify-self:end}
+}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--seal);color:var(--seal-ink);font-weight:700;border:0;border-radius:4px;padding:13px 22px;text-decoration:none;font-size:15px;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.1)}
+.btn.line{background:transparent;color:var(--fg);border:1px solid rgba(243,237,229,.6)}
+.btn.sm{padding:9px 14px;font-size:14px}
+
+/* hero slider */
+.hero{position:relative;height:clamp(520px,78vh,760px);overflow:hidden;background:var(--bg-2)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide:nth-child(1) img{object-position:50% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.88) 0%,rgba(14,11,10,.55) 45%,rgba(14,11,10,.15) 100%),linear-gradient(0deg,rgba(14,11,10,.7),transparent 40%)}
+.hero .copy{position:absolute;inset:0;z-index:2;display:flex;align-items:center}
+.hero .copy .wrap{width:100%}
+.hero .kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--lamp);border:1px solid var(--lamp);padding:4px 10px}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(40px,7vw,84px);line-height:1.1;margin-top:20px}
+.hero h1 em{font-style:normal;color:var(--lamp)}
+.hero .lead{margin-top:20px;font-size:clamp(16px,1.6vw,19px);max-width:30em;color:#E6DED3}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.dots{position:absolute;z-index:3;bottom:24px;right:20px;display:flex;gap:8px}
+.dots button{width:28px;height:4px;border:0;padding:0;background:rgba(243,237,229,.35);cursor:pointer}
+.dots button.on{background:var(--lamp)}
+
+/* sections */
+.sec{padding-block:100px}
+.sec.alt{background:var(--bg-2)}
+.head{text-align:center;max-width:720px;margin:0 auto 56px}
+.head .eb{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--lamp)}
+.head h2{font-family:var(--f-serif);font-weight:700;font-size:clamp(28px,4vw,44px);line-height:1.3;margin-top:12px}
+.head p{margin-top:16px;color:var(--muted)}
+@media (max-width:760px){.sec{padding-block:68px}.head{margin-bottom:40px}}
+
+/* philosophy */
+.philo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.philo .ph{position:relative}
+.philo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.philo .stamp{position:absolute;right:-14px;bottom:-14px;background:var(--seal);color:var(--seal-ink);padding:18px 20px;text-align:center;font-family:var(--f-display)}
+.philo .stamp b{display:block;font-weight:400;font-size:44px;line-height:1}
+.philo .stamp span{font-family:var(--f-body);font-size:13px;font-weight:700}
+.philo h2{font-family:var(--f-serif);font-size:clamp(28px,3.6vw,42px);line-height:1.35}
+.philo .eb{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--lamp);display:block;margin-bottom:14px}
+.philo p.body{margin-top:20px;color:#D8CFC4;max-width:32em}
+.philo .sig{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--f-serif);font-size:20px;color:var(--lamp)}
+@media (max-width:820px){.philo{grid-template-columns:1fr;gap:44px}.philo .stamp{right:12px}}
+
+/* banner */
+.banner{background:var(--lamp);color:var(--lamp-ink);padding-block:56px}
+.banner .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.banner .it{padding:0 20px;text-align:center}
+.banner .it+.it{border-left:1px solid rgba(26,20,12,.25)}
+.banner b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.05}
+.banner span{font-size:14px;font-weight:700}
+@media (max-width:760px){.banner .grid{grid-template-columns:1fr 1fr;row-gap:32px}.banner .it:nth-child(3){border-left:0}}
+
+/* aging */
+.cuts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cut{background:var(--bg-3);border-radius:2px;overflow:hidden}
+.cut img{width:100%;aspect-ratio:7/5;object-fit:cover}
+.cut div{padding:24px}
+.cut h3{font-size:22px;font-weight:700}
+.cut h3 small{font-size:13px;color:var(--lamp);font-weight:700;margin-left:8px}
+.cut p{margin-top:8px;color:var(--muted);font-size:15px}
+.process-age{display:flex;flex-wrap:wrap;margin-top:40px;border:1px solid var(--line)}
+.process-age div{flex:1 1 200px;padding:22px 24px}
+.process-age div+div{border-left:1px solid var(--line)}
+.process-age small{display:block;font-size:12px;letter-spacing:.12em;color:var(--lamp);font-weight:700}
+.process-age b{display:block;margin-top:4px;font-size:18px}
+.process-age p{font-size:14px;color:var(--muted);margin-top:4px}
+@media (max-width:760px){.cuts{grid-template-columns:1fr}.process-age div+div{border-left:0;border-top:1px solid var(--line)}}
+
+/* service */
+.svc{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.svc img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.svc h2{font-family:var(--f-serif);font-size:clamp(26px,3.4vw,38px);line-height:1.4}
+.svc .eb{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--lamp);display:block;margin-bottom:14px}
+.svc ul{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0}
+.svc li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.svc li:last-child{border-bottom:1px solid var(--line)}
+.svc li i{font-style:normal;font-family:var(--f-display);font-size:22px;color:var(--seal)}
+.svc li b{display:block;font-size:17px}
+.svc li span{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.svc{grid-template-columns:1fr;gap:36px}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:10px}
+.gallery figure{margin:0;position:relative;overflow:hidden;background:var(--bg-3)}
+.gallery figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;bottom:0;padding:10px 14px;font-size:13px;background:linear-gradient(0deg,rgba(14,11,10,.8),transparent);width:100%}
+.gallery .g1{grid-row:1 / 3}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:200px}.gallery .g1{grid-column:1 / -1;grid-row:auto;height:auto}}
+@media (prefers-reduced-motion:reduce){.gallery figure img,.slide{transition:none}}
+
+/* menu */
+.best{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;counter-reset:b}
+.best li{counter-increment:b;display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
+.best li::before{content:"BEST " counter(b);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--lamp);padding-top:6px}
+.best h3{font-size:19px;font-weight:700}
+.best p{font-size:14px;color:var(--muted);margin-top:4px}
+.best .pr{font-weight:700;white-space:nowrap;padding-top:2px}
+.best .pr.q{color:var(--muted);font-weight:500;font-size:14px}
+.side-menu{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.side-menu span{border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:14px;color:var(--muted)}
+@media (max-width:760px){.best{grid-template-columns:1fr}}
+
+/* 메뉴 사진 카드 */
+.mcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mcard{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--bg-3);border:1px solid var(--line)}
+.mcard img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.mcard:hover img{transform:scale(1.06)}
+.mcard .ov{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 18px;text-align:center;background:linear-gradient(0deg,rgba(12,10,9,.94) 0%,rgba(12,10,9,.82) 55%,rgba(12,10,9,0) 100%)}
+.mcard .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--lamp-ink);background:var(--lamp);padding:2px 8px}
+.mcard h3{font-size:clamp(20px,2vw,24px);font-weight:900;margin-top:8px;letter-spacing:-.01em}
+.mcard p{font-size:13px;line-height:1.55;color:#D8CFC4;margin-top:4px}
+.mcard b{display:block;margin-top:8px;font-size:14px;color:var(--lamp)}
+.mlist{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin-top:40px;border-top:1px solid var(--fg)}
+.mlist div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.mlist span{min-width:0;font-weight:500}
+.mlist small{display:block;font-size:13px;color:var(--muted);font-weight:400}
+.mlist b{white-space:nowrap;color:var(--muted);font-weight:500;font-size:14px}
+@media (max-width:960px){.mcards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.mlist{grid-template-columns:1fr}}
+@media (max-width:420px){.mcards{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.mcard img{transition:none}.mcard:hover img{transform:none}}
+
+/* stores */
+.stores{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.store{background:var(--bg-3);display:grid;grid-template-columns:160px 1fr;min-height:100%}
+.store img{width:100%;height:100%;object-fit:cover}
+.store div{padding:26px;min-width:0}
+.store .tag{font-size:12px;font-weight:700;color:var(--lamp);letter-spacing:.1em}
+.store h3{font-size:22px;margin-top:6px}
+.store dl{margin:16px 0 0;display:grid;grid-template-columns:64px 1fr;gap:6px 12px;font-size:14px}
+.store dt{color:var(--muted)}
+.store dd{margin:0;min-width:0}
+.store a.map{display:inline-block;margin-top:18px;font-size:14px;font-weight:700;color:var(--lamp);text-decoration:none;border-bottom:1px solid var(--lamp)}
+@media (max-width:860px){.stores{grid-template-columns:1fr}}
+@media (max-width:480px){.store{grid-template-columns:1fr}.store img{aspect-ratio:16/9;height:auto}}
+
+/* why franchise */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--fg)}
+.why div{padding:28px 22px 0 0}
+.why div+div{padding-left:22px;border-left:1px solid var(--line)}
+.why b{font-family:var(--f-display);font-weight:400;font-size:30px;color:var(--lamp);display:block;line-height:1.1}
+.why h3{font-size:18px;margin-top:12px}
+.why p{font-size:14px;color:var(--muted);margin-top:8px}
+@media (max-width:860px){.why{grid-template-columns:1fr 1fr;row-gap:32px}.why div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:480px){.why{grid-template-columns:1fr}.why div,.why div+div{padding:24px 0 0;border-left:0}}
+
+.steps{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--bg-3);padding:22px 18px}
+.steps li::before{content:"STEP " counter(s,decimal-leading-zero);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--seal)}
+.steps b{display:block;margin-top:8px;font-size:17px}
+.steps p{font-size:14px;color:var(--muted);margin-top:4px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* cost */
+.cost{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:960px){.cost{grid-template-columns:1fr 1fr}}
+.cost .c{border:1px solid var(--line);padding:32px 26px;text-align:center}
+.cost .c.key{border-color:var(--lamp)}
+.cost .c span{font-size:14px;color:var(--muted);font-weight:500}
+.cost .c b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(36px,4.4vw,52px);margin-top:8px;line-height:1.1}
+.cost .c b small{font-family:var(--f-body);font-size:16px;font-weight:700;margin-left:4px}
+.cost .c.q b{font-family:var(--f-body);font-size:22px;font-weight:700;padding-block:12px}
+.cost .c p{font-size:13px;color:var(--muted);margin-top:10px}
+.tbl{margin-top:28px;overflow-x:auto;border-top:1px solid var(--fg)}
+.tbl table{width:100%;min-width:520px;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{text-align:left;padding:15px 12px;border-bottom:1px solid var(--line)}
+.tbl th{font-size:13px;color:var(--muted);font-weight:500}
+.tbl td.r{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.tbl td.r.q{color:var(--muted);font-weight:500}
+.note{margin-top:14px;font-size:13px;color:var(--muted)}
+@media (max-width:480px){.cost{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.contact .side{position:relative;overflow:hidden}
+.contact .side img{width:100%;aspect-ratio:418/560;object-fit:cover;object-position:50% 20%}
+.contact .side .cap{position:absolute;left:0;right:0;bottom:0;padding:24px;background:linear-gradient(0deg,rgba(14,11,10,.92),transparent)}
+.contact .side .cap h2{font-family:var(--f-serif);font-size:clamp(24px,3vw,32px);line-height:1.35}
+.contact .side .cap p{margin-top:8px;color:#D8CFC4;font-size:14px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1 / -1}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:var(--bg-3);color:var(--fg)}
+input::placeholder,textarea::placeholder{color:#7D7368}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--lamp);outline-offset:0;border-color:var(--lamp)}
+textarea{min-height:120px;resize:vertical}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);font-weight:400}
+.check input{width:auto;margin-top:5px}
+.done{grid-column:1 / -1;padding:16px;border-left:3px solid var(--lamp);background:var(--bg-3);font-size:14px}
+.tel{margin-top:4px;padding:18px 20px;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tel span{font-size:13px;color:var(--muted)}
+.tel b{font-family:var(--f-display);font-weight:400;font-size:24px}
+@media (max-width:860px){.contact{grid-template-columns:1fr;gap:36px}.contact .side img{aspect-ratio:4/3}}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+
+/* impact: 메인 등장, 사진 줌, 흐르는 띠, 매출 풀블리드 */
+.slide.on img{animation:kb 7s ease-out both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero .copy .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .copy .wrap>:nth-child(2){animation-delay:.12s}
+.hero .copy .wrap>:nth-child(3){animation-delay:.28s}
+.hero .copy .wrap>:nth-child(4){animation-delay:.42s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.ticker{background:var(--seal);color:var(--seal-ink);overflow:hidden;white-space:nowrap;padding-block:14px;border-block:1px solid rgba(0,0,0,.3)}
+.ticker .track{display:inline-flex;animation:tick 32s linear infinite}
+.ticker span{font-family:var(--f-display);font-size:clamp(18px,2.2vw,26px);padding-inline:22px;display:inline-flex;align-items:center;gap:44px}
+.ticker span::after{content:"";width:8px;height:8px;background:var(--lamp);transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.revenue{position:relative;overflow:hidden;padding-block:clamp(90px,14vw,170px);text-align:center;background:var(--bg-2)}
+.revenue img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;transform:scale(1.05)}
+.revenue::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(20,17,16,.35),rgba(20,17,16,.9) 75%)}
+.revenue .wrap{position:relative;z-index:1}
+.revenue .eb{font-size:14px;font-weight:700;letter-spacing:.2em;color:var(--lamp)}
+.revenue .big{font-family:var(--f-display);font-weight:400;font-size:clamp(64px,15vw,190px);line-height:1;margin-top:18px;color:var(--fg);text-shadow:0 10px 40px rgba(0,0,0,.6)}
+.revenue .big em{font-style:normal;color:var(--lamp)}
+.revenue .big small{font-size:.32em;margin-left:.1em}
+.revenue p.sub{margin-top:22px;font-size:clamp(16px,1.8vw,20px);color:#E6DED3}
+.revenue .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.revenue .chips span{border:1px solid rgba(226,189,114,.6);color:var(--lamp);padding:8px 16px;font-weight:700;font-size:15px;background:rgba(20,17,16,.5)}
+.btn{transition:transform .2s ease,filter .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.cut img,.svc img,.philo .ph img{transition:transform .6s ease}
+.cut:hover img{transform:scale(1.04)}
+@media (prefers-reduced-motion:reduce){.slide.on img,.hero .copy .wrap>*,.ticker .track{animation:none}.btn:hover,.cut:hover img{transform:none}}
+
+footer{border-top:1px solid var(--line);padding-block:40px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer .logo b{font-size:22px;color:var(--fg)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="주요 메뉴">
+  <div class="wrap">
+    <ul class="l">
+      <li><a href="#brand">브랜드</a></li>
+      <li><a href="#aging">숙성</a></li>
+      <li><a href="#menu">메뉴</a></li>
+      <li><a href="#stores">매장안내</a></li>
+    </ul>
+    <a class="logo" href="#top" aria-label="육일관 처음으로"><span class="han">肉一貫</span><b>육일관</b><i></i></a>
+    <ul class="r">
+      <li><a href="#franchise">창업안내</a></li>
+      <li><a href="#cost">창업비용</a></li>
+      <li><a href="#contact" style="color:var(--lamp)">가맹문의</a></li>
+    </ul>
+    <a class="btn sm m-cta" href="#contact">가맹문의</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="slide on"><img src="img/table.jpg" alt="육일관 숙성 삼겹살과 목살을 직원이 구워 낸 한 상"></div>
+  <div class="slide"><img src="img/interior.jpg" alt="한옥 문살과 구리 배기 덕트가 있는 육일관 매장 내부"></div>
+  <div class="slide"><img src="img/samgyeop.jpg" alt="21일 혼합숙성한 통삼겹살 원육"></div>
+  <div class="copy">
+    <div class="wrap">
+      <span class="kicker">국내 최초 습식·건식 혼합숙성 · 21일 웻&amp;드라이 에이징</span>
+      <h1>초지일관,<br><em>최상의 고기맛</em>을<br>고집하다</h1>
+      <p class="lead"><b style="color:var(--lamp)">월 매출 1억 8천만 원.</b> 좋은 고기를 21일 숙성하고, 1,000시간 이상 교육받은 직원이 테이블마다 끝까지 구워 드립니다. 그 방식 그대로 육일관 가맹점을 모집합니다.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">가맹 상담 신청</a>
+        <a class="btn line" href="#cost">창업비용 보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="dots" role="tablist" aria-label="메인 사진 넘기기">
+    <button class="on" aria-label="1번 사진"></button><button aria-label="2번 사진"></button><button aria-label="3번 사진"></button>
+  </div>
+</header>
+
+<div class="ticker" aria-label="육일관 핵심 정보">
+  <div class="track">
+    <span>월 매출 1억 8천</span><span>21일 웻&amp;드라이 혼합숙성</span><span>다 구워 드립니다</span><span>가맹비 1,000만 원</span><span>계약이행보증금 0원</span><span>창업 문의 1661-2337</span>
+    <span aria-hidden="true">월 매출 1억 8천</span><span aria-hidden="true">21일 웻&amp;드라이 혼합숙성</span><span aria-hidden="true">다 구워 드립니다</span><span aria-hidden="true">가맹비 1,000만 원</span><span aria-hidden="true">계약이행보증금 0원</span><span aria-hidden="true">창업 문의 1661-2337</span>
+  </div>
+</div>
+
+<section class="sec" id="brand">
+  <div class="wrap philo">
+    <div class="ph">
+      <img src="img/gangdae.jpg" alt="한옥 처마와 개방형 창, 2층 테라스가 있는 육일관 건대 본점 외관" style="object-position:50% 40%">
+      <div class="stamp"><b>21일</b><span>혼합숙성</span></div>
+    </div>
+    <div>
+      <span class="eb">맛있을 수밖에 없는 이유</span>
+      <h2>육일관은 고기 원육부터 다릅니다</h2>
+      <p class="body">국내산 한돈 중에서도 최고급 일품만 고르고, 습식과 건식을 교차하는 혼합숙성을 21일 동안 거칩니다. 그렇게 완성한 고기를 가장 맛있는 상태로 드실 수 있도록, 숙달된 직원이 처음부터 끝까지 구워 드립니다.</p>
+      <p class="body">누가 고기를 구울지 눈치 보지 않아도 되고, 떨어진 반찬을 가지러 다니지 않아도 됩니다. 다 구워 드리고, 다 가져다 드립니다.</p>
+      <p class="sig">肉一貫 · 처음 정한 맛을 끝까지</p>
+    </div>
+  </div>
+</section>
+
+<section class="banner" aria-label="육일관 주요 숫자">
+  <div class="wrap grid">
+    <div class="it"><b class="num">1억8천</b><span>월 매출</span></div>
+    <div class="it"><b class="num">21일</b><span>습식·건식 혼합숙성</span></div>
+    <div class="it"><b class="num">1,000h</b><span>직원 1인당 교육 시간</span></div>
+    <div class="it"><b class="num">4.76</b><span>본점 네이버 별점 · 리뷰 5,421</span></div>
+  </div>
+</section>
+
+<section class="sec" id="aging">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">AGING</p>
+      <h2>두툼하게, 속은 촉촉하게</h2>
+      <p>손님들이 "스테이크 같다"고 말하는 목살과 통삼겹살. 웻에이징으로 육즙과 부드러움을, 드라이에이징으로 고소한 풍미를 더합니다.</p>
+    </div>
+    <div class="cuts">
+      <div class="cut"><img src="img/moksal.jpg" alt="마블링이 고르게 퍼진 혼합숙성 목살 원육" loading="lazy">
+        <div><h3>혼합숙성 프리미엄 목살<small>21일 숙성</small></h3><p>질기고 퍽퍽한 목살은 없습니다. 목살을 안 좋아하던 손님도 반하는 맛.</p></div></div>
+      <div class="cut"><img src="img/samgyeop.jpg" alt="길게 이어진 혼합숙성 통삼겹살 원육" loading="lazy">
+        <div><h3>혼합숙성 프리미엄 통삼겹살<small>21일 숙성</small></h3><p>단백질과 아미노산이 풍부해 부드럽고, 구울수록 육즙이 살아납니다.</p></div></div>
+    </div>
+    <div class="process-age" aria-label="숙성 과정">
+      <div><small>원육 선별</small><b>국내산 한돈 일품</b><p>한돈 인증점, 100% 국내산만 취급</p></div>
+      <div><small>웻에이징</small><b>육즙과 부드러움</b><p>진공 상태로 결을 연하게</p></div>
+      <div><small>드라이에이징</small><b>고소한 풍미</b><p>수분을 날려 맛을 응축</p></div>
+      <div><small>완성</small><b>21일 혼합숙성육</b><p>주문과 동시에 숙성고에서 꺼냅니다</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="service">
+  <div class="wrap svc">
+    <img src="img/interior.jpg" alt="테이블마다 티오더 태블릿과 배기 덕트가 설치된 육일관 매장" loading="lazy">
+    <div>
+      <span class="eb">SERVICE</span>
+      <h2>손님은 식사만 하시면 됩니다</h2>
+      <ul>
+        <li><i>01</i><div><b>테이블마다 구워 드리는 직원</b><span>1,000시간 이상 교육받은 직원이 처음부터 끝까지 그릴링</span></div></li>
+        <li><i>02</i><div><b>매일 스팀청소와 세스코 방역</b><span>고깃집이지만 청결하다는 리뷰가 꾸준히 달리는 이유</span></div></li>
+        <li><i>03</i><div><b>눈치 보지 않는 티오더 주문</b><span>직원을 부르지 않아도 테이블에서 바로 추가 주문</span></div></li>
+        <li><i>04</i><div><b>단체 회식·청첩장 모임 특화</b><span>예약 시간에 맞춰 모든 세팅을 미리 준비</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="revenue" aria-label="월 매출">
+  <img src="img/table.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="eb">맛으로 증명한 숫자</p>
+    <p class="big num">월 <em>1억 8천</em><small>만 원</small></p>
+    <p class="sub">고기는 21일 숙성하고, 매출은 손님이 증명합니다.</p>
+    <div class="chips"><span>가맹비 1,000만 원</span><span>교육비 500만 원</span><span>보증금 0원</span></div>
+    <div style="margin-top:34px"><a class="btn" href="#contact">지금 가맹 상담 신청</a></div>
+  </div>
+</section>
+
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">GALLERY</p>
+      <h2>육일관의 한 상과 공간</h2>
+    </div>
+    <div class="gallery">
+      <figure class="g1"><img src="img/table.jpg" alt="육일관 대표 한 상" loading="lazy"><figcaption>구워서 내는 숙성 삼겹·목살 한 상</figcaption></figure>
+      <figure><img src="img/front-night.jpg" alt="숙성목살 배너가 걸린 육일관 야간 외관" loading="lazy"><figcaption>구의역점, "100% 국내산만 취급합니다"</figcaption></figure>
+      <figure><img src="img/moksal.jpg" alt="숙성 목살 원육" loading="lazy"><figcaption>혼합숙성 목살</figcaption></figure>
+      <figure><img src="img/gangdae.jpg" alt="육일관 건대 본점 외관" loading="lazy" style="object-position:50% 45%"><figcaption>건대 본점, 개방형 창과 테라스</figcaption></figure>
+      <figure><img src="img/interior.jpg" alt="육일관 홀" loading="lazy"><figcaption>문살 파티션과 구리 덕트</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="menu">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">MENU</p>
+      <h2>21일 숙성, 직원이 구워 내는 메뉴</h2>
+    </div>
+    <div class="mcards">
+      <article class="mcard"><img src="img/samgyeop.jpg" alt="21일 혼합숙성 통삼겹살 원육" loading="lazy">
+        <div class="ov"><span class="badge">BEST 1</span><h3>혼합숙성 통삼겹살</h3><p>21일 웻&amp;드라이 숙성으로<br>두툼하게, 육즙은 꽉 차게</p><b class="num">150g 16,000원</b></div></article>
+      <article class="mcard"><img src="img/moksal.jpg" alt="마블링이 퍼진 혼합숙성 목살 원육" loading="lazy">
+        <div class="ov"><span class="badge">BEST 2</span><h3>혼합숙성 목살</h3><p>질기고 퍽퍽한 목살은 그만,<br>스테이크처럼 촉촉한 한 점</p><b class="num">150g 16,000원</b></div></article>
+      <article class="mcard"><img src="img/grill.jpg" alt="직원이 구워 와사비를 올린 숙성 삼겹살과 목살" loading="lazy">
+        <div class="ov"><span class="badge">SIGNATURE</span><h3>다 구워 드립니다</h3><p>교육받은 직원이 불판 앞에서<br>처음부터 끝까지 그릴링</p><b>그릴링 서비스 무료</b></div></article>
+      <article class="mcard"><img src="img/table.jpg" alt="고기와 찌개, 주류가 함께 차려진 육일관 한돈세트 한 상" loading="lazy" style="object-position:50% 55%">
+        <div class="ov"><span class="badge">SET</span><h3>육일관 한돈세트</h3><p>고기 3인분 + 찌개 + 소주·맥주<br>가장 많이 찾는 구성</p><b class="num">57,000원</b></div></article>
+    </div>
+    <div class="mlist" aria-label="그 밖의 메뉴">
+      <div><span>한우 투뿔 꽃등심<small>10일 이상 에이징 1++</small></span><b>시가</b></div>
+      <div><span>한우 혼합숙성육회<small>1++ · 150g</small></span><b>시가</b></div>
+      <div><span>숙성 가브리살 · 항정살<small>국내산 한돈</small></span><b>단품</b></div>
+      <div><span>초지일밥 볶음밥<small>직원들이 매일 해 먹는 마무리</small></span><b>사이드</b></div>
+      <div><span>한우 된장찌개 · 한돈 김치찌개</span><b>세트 선택</b></div>
+      <div><span>계란찜 · 알밥 · 냉면</span><b>사이드</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="stores">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">STORES</p>
+      <h2>매장안내</h2>
+      <p>상담 전에 매장에서 직접 드셔 보세요. 고기, 그릴링, 상차림을 손님 자리에서 확인하실 수 있습니다.</p>
+    </div>
+    <div class="stores">
+      <article class="store">
+        <img src="img/gangdae.jpg" alt="육일관 건대 본점 외관" loading="lazy">
+        <div>
+          <p class="tag">본점</p>
+          <h3>육일관 건대 본점</h3>
+          <dl>
+            <dt>주소</dt><dd>서울 광진구 아차산로31길 10</dd>
+            <dt>교통</dt><dd>건대입구역 2번 출구 약 240m</dd>
+            <dt>규모</dt><dd>지하~2층, 단체석</dd>
+            <dt>영업</dt><dd>매일 12:00–24:00</dd>
+            <dt>전화</dt><dd class="num">0507-1324-5666</dd>
+          </dl>
+          <a class="map" href="https://map.naver.com/p/search/%EC%9C%A1%EC%9D%BC%EA%B4%80%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+        </div>
+      </article>
+      <article class="store">
+        <img src="img/front.jpg" alt="육일관 구의역점 입구" loading="lazy">
+        <div>
+          <p class="tag">구의역점</p>
+          <h3>육일관 구의역점</h3>
+          <dl>
+            <dt>주소</dt><dd>서울 광진구 자양로18길 15 1층</dd>
+            <dt>교통</dt><dd>구의역 1번 출구 도보 1분</dd>
+            <dt>규모</dt><dd>30평 · 최대 40인</dd>
+            <dt>주차</dt><dd>구의1동 공영주차장 10m</dd>
+            <dt>예약</dt><dd>8인 이상 단체는 전화 문의</dd>
+          </dl>
+          <a class="map" href="https://map.naver.com/p/search/%EC%9C%A1%EC%9D%BC%EA%B4%80%20%EA%B5%AC%EC%9D%98%EC%97%AD" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="franchise">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">FRANCHISE</p>
+      <h2>본점의 맛과 서비스를 그대로 옮깁니다</h2>
+    </div>
+    <div class="why">
+      <div><b>숙성</b><h3>본사 숙성육 공급</h3><p>21일 혼합숙성을 본사가 맡아 어느 매장에서도 같은 고기를 냅니다.</p></div>
+      <div><b>교육</b><h3>그릴링 직원 양성</h3><p>본점 직원과 같은 커리큘럼으로 굽기와 응대를 교육합니다.</p></div>
+      <div><b>공간</b><h3>30평이면 충분</h3><p>구의역점처럼 30평 1층 매장에서도 40인 단체를 받습니다.</p></div>
+      <div><b>운영</b><h3>티오더 · 위생 시스템</h3><p>주문, 청소, 방역까지 본점에서 검증한 운영 방식을 함께 세팅합니다.</p></div>
+    </div>
+    <ol class="steps">
+      <li><b>가맹 상담</b><p>예산·희망 지역 확인, 매장 시식</p></li>
+      <li><b>상권 분석</b><p>후보 점포 방문과 입지 검토</p></li>
+      <li><b>가맹 계약</b><p>정보공개서 제공 후 계약</p></li>
+      <li><b>인테리어 · 교육</b><p>매장 공사와 본점 실습 교육</p></li>
+      <li><b>오픈</b><p>오픈 지원과 초기 운영 관리</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="cost">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">COST</p>
+      <h2>창업비용</h2>
+      <p>점포 크기와 상태에 따라 달라지는 항목은 상담 때 견적으로 안내해 드립니다.</p>
+    </div>
+    <div class="cost">
+      <div class="c key"><span>가맹비</span><b class="num">1,000<small>만 원</small></b><p>브랜드 사용권</p></div>
+      <div class="c key"><span>교육비</span><b class="num">500<small>만 원</small></b><p>숙성육 관리 · 그릴링 · 매장 운영</p></div>
+      <div class="c key"><span>계약이행보증금</span><b class="num">0<small>원</small></b><p>보증금 없이 시작</p></div>
+      <div class="c"><span>인테리어</span><b class="num">250<small>만 원/평</small></b><p>30평 기준 약 7,500만 원</p></div>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>항목</th><th>내용</th><th style="text-align:right">금액</th></tr></thead>
+        <tbody>
+          <tr><td>가맹비</td><td>브랜드 사용권</td><td class="r">1,000만 원</td></tr>
+          <tr><td>교육비</td><td>본점 실습 교육, 직원 그릴링 교육</td><td class="r">500만 원</td></tr>
+          <tr><td>계약이행보증금</td><td>없음</td><td class="r">0원</td></tr>
+          <tr><td>인테리어</td><td>한옥 처마 입구, 문살 파티션, 조명 (평당 250만 원)</td><td class="r">30평 기준 7,500만 원</td></tr>
+          <tr><td>주방 · 설비</td><td>숙성고, 불판, 배기 덕트</td><td class="r q">견적</td></tr>
+          <tr><td>간판 · 집기</td><td>라이트박스 간판, 티오더, 초도 물품</td><td class="r q">견적</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">VAT 별도 여부와 점포 임대 보증금·권리금은 상담 시 안내합니다.</p>
+  </div>
+</section>
+
+<section class="sec alt" id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="side">
+        <img src="img/front-night.jpg" alt="밤에 불이 켜진 육일관 외관" loading="lazy">
+        <div class="cap"><h2>우리 동네에도<br>초지일관 육일관</h2><p>남겨 주신 연락처로 담당자가 직접 연락드립니다.</p></div>
+      </div>
+      <div class="tel"><span>창업 문의</span><b class="num">1661-2337</b></div>
+    </div>
+    <form id="lead" novalidate>
+      <div><label for="f-name">이름</label><input id="f-name" name="name" required autocomplete="name" placeholder="홍길동"></div>
+      <div><label for="f-tel">연락처</label><input id="f-tel" name="tel" required type="tel" autocomplete="tel" placeholder="010-0000-0000"></div>
+      <div><label for="f-area">희망 지역</label><input id="f-area" name="area" placeholder="예: 경기 성남"></div>
+      <div><label for="f-size">희망 평수</label>
+        <select id="f-size" name="size"><option value="">선택해 주세요</option><option>20평 미만</option><option>20–30평</option><option>30–40평</option><option>40평 이상</option></select></div>
+      <div><label for="f-budget">창업 예산</label>
+        <select id="f-budget" name="budget"><option value="">선택해 주세요</option><option>1억 원 미만</option><option>1억–2억 원</option><option>2억–3억 원</option><option>3억 원 이상</option></select></div>
+      <div><label for="f-store">점포 보유</label>
+        <select id="f-store" name="store"><option value="">선택해 주세요</option><option>점포 있음</option><option>점포 찾는 중</option><option>업종 변경 희망</option></select></div>
+      <div class="full"><label for="f-msg">문의 내용</label><textarea id="f-msg" name="msg" placeholder="궁금한 점을 적어 주세요"></textarea></div>
+      <label class="check full" for="f-agree"><input id="f-agree" type="checkbox" required> 상담을 위한 개인정보 수집·이용에 동의합니다.</label>
+      <div class="full"><button class="btn" type="submit" style="width:100%">가맹 상담 신청하기</button></div>
+      <p class="done" id="done" hidden></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><b>육일관</b></span>
+    <span>본점 서울 광진구 아차산로31길 10 · 구의역점 서울 광진구 자양로18길 15 1층 · 운영사 (주)육일관 · 창업 문의 1661-2337</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')), dots=[].slice.call(document.querySelectorAll('.dots button')), i=0, t;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(n){ slides[i].classList.remove('on'); dots[i].classList.remove('on'); i=n; slides[i].classList.add('on'); dots[i].classList.add('on'); }
+  function start(){ if(reduce) return; clearInterval(t); t=setInterval(function(){ go((i+1)%slides.length); },5000); }
+  dots.forEach(function(d,n){ d.addEventListener('click',function(){ go(n); start(); }); });
+  start();
+})();
+/* 숫자 배너 카운트업: 화면에 들어올 때 한 번. 기본 상태는 최종 숫자 그대로 */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els=[].slice.call(document.querySelectorAll('.banner b'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return; io.unobserve(e.target);
+      var el=e.target, txt=el.textContent, m=txt.match(/[\d,.]+/); if(!m) return;
+      var raw=m[0], dec=(raw.split('.')[1]||'').length, to=parseFloat(raw.replace(/,/g,'')), t0=null;
+      function f(ts){ if(!t0) t0=ts; var p=Math.min((ts-t0)/1200,1), v=to*(1-Math.pow(1-p,3));
+        var s=dec? v.toFixed(dec) : Math.round(v).toLocaleString('en-US');
+        el.textContent=txt.replace(raw,s); if(p<1) requestAnimationFrame(f); else el.textContent=txt; }
+      requestAnimationFrame(f);
+    });
+  },{threshold:.6});
+  els.forEach(function(el){ io.observe(el); });
+})();
+/* 가맹 상담 접수: FormSubmit으로 메일 전송 */
+var LEAD_EMAIL='kmokmokmokmo@naver.com';
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, done=document.getElementById('done'), btn=f.querySelector('button[type=submit]');
+  var name=f.name.value.trim(), tel=f.tel.value.trim();
+  done.hidden=false;
+  if(!name||!tel){ done.textContent='이름과 연락처를 입력해 주세요.'; (name?f.tel:f.name).focus(); return; }
+  if(!document.getElementById('f-agree').checked){ done.textContent='개인정보 수집·이용에 동의해 주세요.'; return; }
+  var data={
+    '이름':name,'연락처':tel,'희망 지역':f.area.value.trim()||'-','희망 평수':f.size.value||'-',
+    '창업 예산':f.budget.value||'-','점포 보유':f.store.value||'-','문의 내용':f.msg.value.trim()||'-',
+    _subject:'[육일관 가맹상담] '+name+' / '+(f.area.value.trim()||'지역 미정'),
+    _template:'table', _captcha:'false'
+  };
+  btn.disabled=true; btn.textContent='보내는 중…'; done.textContent='상담 신청을 보내고 있습니다.';
+  fetch('https://formsubmit.co/ajax/'+LEAD_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){ return r.json().then(function(j){ if(!r.ok||String(j.success)==='false') throw new Error(j.message||'fail'); }); })
+    .then(function(){ done.textContent=name+'님, 상담 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.'; f.reset(); btn.textContent='접수 완료'; })
+    .catch(function(){ done.textContent='전송에 실패했습니다. 창업 문의 1661-2337로 전화 주시면 바로 상담해 드립니다.'; btn.disabled=false; btn.textContent='가맹 상담 신청하기'; });
+});
+</script>
+
+</body>
+</html>
